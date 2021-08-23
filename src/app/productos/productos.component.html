@@ -1,0 +1,26 @@
+<h2 align="center">Productos</h2>
+<br>
+<div class="card-body">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Número de lote</th>
+        <th scope="col">Fecha de vencimiento</th>
+        <th scope="col">Precio</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of allProduct">
+        <td>{{item.producto}}</td>
+        <td>{{item.cantidad}}</td>
+        <td>{{item.numero_lote}}</td>
+        <td>{{item.fecha_vencimiento}}</td>
+        <td>{{item.precio}}</td>
+        <td><button *ngIf="item.estado_producto == '0'" (click)="activarProducto(item.id)" class="btn btn-sm btn-success">Activar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,26 @@
+<h2 align="center">Productos vendidos</h2>
+<br>
+<div class="card-body">
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col"># compra</th>
+        <th scope="col">Nombre del cliente</th>
+        <!-- <th scope="col">Producto</th> -->
+        <th scope="col">Cantidad</th>
+        <th scope="col">Valor pagado</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of comprasAll">
+        <td>{{item.id}}</td>
+        <td>{{item.nombre_cliente}}</td>
+        <!-- <td>{{item.id_producto}}</td> -->
+        <td>{{item.cantidad}}</td>
+        <td>{{item.precio_total}}</td>
+        <td><a class="btn btn-primary btn-sm" (click)="factura(item.id)">Descargar Factura</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
