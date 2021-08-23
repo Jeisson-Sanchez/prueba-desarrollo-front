@@ -35,6 +35,7 @@ export class FormComponent implements OnInit {
     .subscribe((data) => {
       console.log(data);
       alert(data)
+      location.reload();
     }, (error) => {
       alert("Debe llenar todos los campos")
     });
